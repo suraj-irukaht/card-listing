@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+   --yellow: #f6f6c9;
+   --light-yellow: #d6d8b13b;
+   --green: #4fa095;
+   --light-green: #d6d8b1;
+   --dark-blue: #153462;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font: 400 1rem/1.5 'Poppins', sans-serif;
+   color: var(--dark-blue);
+   background-color: var(--yellow);
+   min-width: 360px;
+}
+
+ol,
+ul {
+   list-style: none;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+}
+
+a {
+   display: inline-block;
+   transition: 0.5s ease-in-out;
+}
+
+.wrapper {
+   position: relative;
+   min-height: 100vh;
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1200px;
+   padding-inline: 1.3rem;
+   margin-inline: auto;
+}
+
+.header {
+   padding-block: 0.9rem;
+}
+
+.header .logo {
+   width: 40px;
+}
+
+.card-wrap {
+   padding-top: 2rem;
+   padding-bottom: 3rem;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+}
+
+.card {
+   padding: 1rem;
+   border-radius: 20px;
+   background-color: var(--light-yellow);
+   margin-bottom: 1.8rem;
+   box-shadow: 0px 5px 15px 5px rgba(184, 184, 184, 0.3);
+}
+
+.card:hover .card-img img {
+   transform: scale(1.1) rotate(2deg);
+}
+
+.card-img {
+   border-radius: 20px 20px 0 0;
+   overflow: hidden;
+   margin-bottom: 1.8rem;
+}
+
+.card-img img {
+   transition: 0.5s ease-in-out;
+}
+
+.user {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+}
+
+.user-img {
+   width: 60px;
+   height: 60px;
+   overflow: hidden;
+   border-radius: 50%;
+   border: 2px solid var(--dark-blue);
+}
+
+.user-img img {
+   border-radius: 50%;
+}
+
+.user-info ul {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding-top: 1rem;
+}
+
+.user-info ul li {
+   width: 30px;
+}
+
+.user-info ul li + li {
+   margin-left: 0.6rem;
+}
+
+.user-info ul li a:hover {
+   transform: translateY(-2px);
+}
+
+.user-info h2 {
+   line-height: 1;
+   font-size: 1.5rem;
+}
+
+.footer {
+   padding-block: 2rem;
+   border-top: 1px solid rgba(9, 10, 28, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+   .card-wrap {
+      flex-direction: row;
+      width: calc(100% + 1.3rem);
+   }
+
+   .card {
+      width: calc(50% - 1.3rem);
+      margin-right: 1.3rem;
+      box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.3);
+   }
+
+   .user-info h2 {
+      font-size: 1.2rem;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .card {
+      width: calc(33.33% - 1.3rem);
+      margin-bottom: 2.5rem;
+   }
+}
